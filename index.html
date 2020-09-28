@@ -1,19 +1,27 @@
 <html>
+
 <head>
 
   <meta charset="utf-8">
   <!-- THIS ONE META BELOW MADE THE PAGE RESPONSIVE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- I think this is just to get a font in your webpage -->
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 
   <!-- these are the custom google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
 
 
   <!-- CSS only (deirectly from Bootstrap site) -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+  <!-- This stylesheet was from W3Schools and was needed for the panels to display properly -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
   <!-- This is for the mission list css formatting -->
   <!-- https://stackpath.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css -->
 
@@ -21,20 +29,87 @@
   <script src="https://kit.fontawesome.com/8480304fd8.js" crossorigin="anonymous"></script>
 
   <!-- have to comment out my own style sheet cause it was really messing with things -->
-  <link rel="stylesheet" type="text/css" href="./css/style.css"> 
-  
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
   <!-- JS, Popper.js, and jQuery (directly from Bootstrap site) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
- 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+
+  <title>My Epic Calling</title>
 
 </head>
+
 <body>
+  <!-- START This is broccoli trying to learn how to make the mission cards in bootstrap START-->
 
-  <h1>MY<span class="pow">EPIC</span>CALLING .COM IS THE WORLD'S MOST EPIC LIST OF VEGAN MISSIONS THAT YOU CAN DO <span class="pow">RIGHT NOW.</span></h1>
+  <div class="container-fluid ">
+    <h2>Panel Group</h2>
+    <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+    <div class="panel-group">
+      
+      <!--START: THE FOLLOWING CODE IS FOR THE MISSION CARD -->
+      <div class="panel panel-default">
+        <!-- <div class="panel-heading">Panel Header</div> -->
+        <div class="mission-card">
+          <div class="badges">
+            <img src="./icons/easy.png" alt="easy icon" class="icon">
+            <img src="./icons/free.png" alt="free icon" class="icon">
+            <img src="./icons/remote.png" alt="remote icon" class="icon">
+          </div>
+
+          <div class="thumbnail">
+            <img src="./missionThumbnails/peachIcon.png" alt="peach">
+          </div>
+
+          <div class="mission-title">
+            Go ask 5 strangers if they've considered veganism.
+          </div>
+
+          <div class="mission-rating">
+            <img src="./icons/rating.png" alt="">
+            <img src="./icons/time-fast.png" alt="" style="float: left;">
+            <p>less than 5 minutes. FAST</p>
+          </div>
+
+          <div class="mission-author">
+            Agent broccoli
+          </div>
+
+          <div class="action-button">
+            <button type="button" class="btn btn-info ">Info</button>
+            <button type="button" class="btn btn-success ">Accept</button>
+          </div>
+        </div>
+      </div>
+<!--END: THE FOLLOWING CODE IS FOR THE MISSION CARD -->
+
+    </div>
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+  </div>
+
+  <!--FINISH This is broccoli trying to learn how to make the mission cards in bootstrap FINISH-->
+
+  <!-- <h1>MY<span class="pow">EPIC</span>CALLING .COM IS THE WORLD'S MOST EPIC LIST OF VEGAN MISSIONS THAT YOU CAN DO <span class="pow">RIGHT NOW.</span></h1> -->
   <div class="container-fluid">
-
+    <!-- 
 <div class="row module">
   
     <div class="col-sm-3">
@@ -58,7 +133,8 @@
   <label for="influencer"><h1>Influencer</h1></label><br>
     </div>
     
-    
+
+
 
   <ul>
     <a href="https://www.youtube.com/watch?v=dhLcyBCJ0r4">
@@ -101,7 +177,8 @@
   </ul>
 
     
-  </div>
+  </div> -->
 
 </body>
+
 </html>

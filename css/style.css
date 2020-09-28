@@ -1,22 +1,11 @@
-.content1-left {
-	background-color: red;
-	height: 400px;
-}
-.content1-center {
-	background-color: greenyellow;
-	height: 400px;
-}
-.content1-right {
-	background-color: purple;
-	height: 400px;
-}
-body {
+
+/* body {
 	background-color: lightblue;
 	background-image: url(../cssImages/matteBlackBGRD.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: #03a9f4;
-  }
+  } */
   
 h1 {
 	color: whitesmoke;
@@ -29,46 +18,83 @@ h1 {
   font-family: 'Paytone One', sans-serif;
   }
 
+  /* h3 {
+	  padding-top: 0px;
+	  margin-top: 0px;
+	  position: absolute;
+	  top: 5px;
+	  left: 115px;
+  } */
+
   .pow {
 	font-family: 'Permanent Marker', cursive;
 	color: 00ADEF;
   }
 
+  .mission-card {
+	  display: grid;
+	  grid-template-columns: 100px 1fr 1fr;
+	  grid-template-areas:
+      "badges mission-title mission-title"
+	  "thumbnail mission-rating mission-rating"
+	  "thumbnail mission-author mission-author"
+	  ". action-button action-button";
+  }
+  .badges {
+	  grid-area: badges;
+  }
+
+  .action-button {
+	  grid-area: action-button;
+	  justify-self: end;
+  }
   
-/* THIS IS THE CHECK BOX CODE START */
-  input[type=checkbox] {
-	  position: relative;
-	  width: 80px;
-	  height: 40px;
-	  -webkit-appearance: none;
-	  background: #c6c6c6;
-	  outline: none;
-	  border-radius: 20px;
-	  box-shadow: inset 0 0 5px rgba(0,0,0,.2)
-	  transition: .5s;
+  .icon {
+	  margin-top: 0px;
+	  margin-bottom: 5px;
+	  padding-top: 0px;
+	  max-width: 25px;
+	  max-height: 20px;
+	  
 	}
+.thumbnail {
+	max-width: 100px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/* border: none; */
+	grid-area: thumbnail;
+}
 
-	input:checked[type=checkbox] {
-		background: #03a9f4;
-	}
 
-	input[type=checkbox]:before {
-		content: '';
+.mission-title {
+	grid-area: mission-title;
+}
+
+.mission-rating {
+	grid-area: mission-rating;
+}
+
+.mission-author {
+	grid-area: mission-author;
+}
+	/* .btn.btn-primary {
 		position: absolute;
-		width: 40px;
-		height: 40px;
-		border-radius:20px;
-		top: 0;
-		left: 0;
-		background: #fff;
-		transform: scale(1.1);
-		box-shadow: 0 2px 5px rgba(0,0,0,.2);
-		transition: .5s;
-	}
-	input:checked[type=checkbox]:before {
-		left: 40px;
-	}
-/* THIS SHOULD BE THE END OF THE CHECKBOX CODE */
+		right: 5px;
+		bottom: 5px;
+		 float: right; */
+	} 
+	
+	/* .label.label-primary {
+		float: left;
+		position: absolute; 
+		bottom: 3px;
+		left: 3px;
+	} */
+	
+	.panel-body {
+		position: relative;
+}
+
 
 
 /* THIS IS THE START OF THE MISSION LIST CODE */
@@ -83,7 +109,7 @@ h1 {
 		border-radius: 5px;
 		overflow: hidden;
 	}
-
+	
 	ul li {
 		display: flex;
 		background: #9fdefb;
@@ -92,11 +118,11 @@ h1 {
 		margin: 5px 0;
 		transition: .5s;
 	}
-
+	
 	ul li span:nth-child(1) {
 		width:30px;
 	}
-
+	
 	ul li span:nth-child(2) {
 		width:200px;
 	}
@@ -105,7 +131,7 @@ h1 {
 		width:100px;
 		text-align: right;
 	}
-
+	
 	ul li span:nth-child(4) {
 		width:70px;
 		text-align: right;
@@ -115,5 +141,41 @@ h1 {
 		transform: scale(1.06);
 		background: #03a9f4
 	}
-
+	
 	/* THIS IS THE END OF THE MISSION LIST CODE */
+	
+	
+	/* THIS IS THE CHECK BOX CODE START */
+	  input[type=checkbox] {
+		  position: relative;
+		  width: 80px;
+		  height: 40px;
+		  -webkit-appearance: none;
+		  background: #c6c6c6;
+		  outline: none;
+		  border-radius: 20px;
+		  box-shadow: inset 0 0 5px rgba(0,0,0,.2)
+		  transition: .5s;
+		}
+	
+		input:checked[type=checkbox] {
+			background: #03a9f4;
+		}
+	
+		input[type=checkbox]:before {
+			content: '';
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			border-radius:20px;
+			top: 0;
+			left: 0;
+			background: #fff;
+			transform: scale(1.1);
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+			transition: .5s;
+		}
+		input:checked[type=checkbox]:before {
+			left: 40px;
+		}
+	/* THIS SHOULD BE THE END OF THE CHECKBOX CODE */
